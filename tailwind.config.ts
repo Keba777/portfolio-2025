@@ -10,7 +10,16 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#FFFFFF",
+        accent: "#FF6B4A",
+
+        accentLight: "#FF846A",
+        accentDark: "#E0553C",
+
+        lightGray: "#C0C0C0",
+        mutedBlue: "#24292E",
+
+        softRed: "#FF4A4A",
       },
     },
   },
