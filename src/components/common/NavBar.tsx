@@ -11,18 +11,18 @@ const links = [
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center py-4 px-32">
-      <div>
-      <Link href="/">
+    <nav className="flex justify-between items-center py-4 pr-24 pl-12 h-20 fixed top-0 left-0 w-full bg-background z-50">
+      <div className="flex items-center">
+        <Link href="/">
           <ThreeDName />
         </Link>
       </div>
-      <ul>
+      <ul className="flex space-x-10 items-center ">
         {links.map(({ href, label }) => (
-          <li key={`${href}${label}`} className="inline-block mx-4">
+          <li key={`${href}${label}`}>
             <Link
               href={href}
-              className="text-primary hover:text-accent transition-colors duration-300 ease-in-out font-semibold text-sm"
+              className="text-primary hover:text-accent transition-colors duration-300 ease-in-out font-medium text-sm"
             >
               {label}
             </Link>
