@@ -11,13 +11,13 @@ const links = [
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center py-4 pr-24 pl-12 h-20 fixed top-0 left-0 w-full bg-background z-50">
+    <nav className="flex justify-between items-center py-4 pr-32 pl-12 h-20 fixed top-0 left-0 w-full bg-background z-50">
       <div className="flex items-center">
         <Link href="/">
           <ThreeDName />
         </Link>
       </div>
-      <ul className="flex space-x-10 items-center ">
+      <ul className="flex space-x-12 items-center ">
         {links.map(({ href, label }) => (
           <li key={`${href}${label}`}>
             <Link

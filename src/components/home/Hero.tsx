@@ -3,8 +3,8 @@ import Profile from "../../../public/images/profile.png";
 
 const Hero = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[calc(100vh-5rem)] mt-20">
-      <div className="flex flex-col justify-center items-start pl-24">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[calc(100vh-5rem)] mt-20 px-20">
+      <div className="flex flex-col justify-center items-start">
         <h1 className="text-4xl font-bold text-primary">
           Hello<span className="text-accent">.</span>
         </h1>
