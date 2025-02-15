@@ -44,7 +44,7 @@ export default function ThreeDName() {
 
     // Load font & create text
     const font = new FontLoader().parse(fontJson);
-    const textGeometry = new TextGeometry("Kibreab", {
+    const textGeometry = new TextGeometry("Kibreab Aklilu", {
       font: font,
       size: 0.8,
       depth: 0.2,

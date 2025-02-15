@@ -11,7 +11,7 @@ const links = [
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center py-4 pr-32 pl-12 h-20 fixed top-0 left-0 w-full bg-background z-50">
+    <nav className="flex justify-between items-center py-4 pr-32 pl-[68px] h-20 fixed top-0 left-0 w-full z-50">
       <div className="flex items-center">
         <Link href="/">
           <ThreeDName />
