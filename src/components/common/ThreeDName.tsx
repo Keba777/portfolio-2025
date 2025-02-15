@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
@@ -8,8 +8,15 @@ import fontJson from "three/examples/fonts/helvetiker_regular.typeface.json"; //
 
 export default function ThreeDName() {
   const mountRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return; // Prevents mismatched HTML on first render
+
     const mount = mountRef.current;
     if (!mount) return;
 
@@ -24,12 +31,12 @@ export default function ThreeDName() {
       0.1,
       1000
     );
-    camera.position.set(0, 0, 3); // Adjusted for a better fit
+    camera.position.set(0, 0, 3);
 
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true, // Allow transparency
+      alpha: true,
     });
     renderer.setSize(mount.clientWidth, mount.clientHeight);
     mount.appendChild(renderer.domElement);
@@ -76,7 +83,7 @@ export default function ThreeDName() {
 
     // Animation variables
     let fadeDirection = 1;
-    let opacity = 0.6; // Never goes fully dark
+    let opacity = 0.6;
     let rotationX = 0;
     let rotationY = 0;
 
@@ -84,13 +91,11 @@ export default function ThreeDName() {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Fade in & out effect (between 0.6 and 1)
-      opacity += 0.0015 * fadeDirection; // Slower transition
+      opacity += 0.0015 * fadeDirection;
       if (opacity >= 1 || opacity <= 0.6) fadeDirection *= -1;
       textMaterial.opacity = Math.min(1, Math.max(0.6, opacity));
 
-      // Subtle rotation effect
-      rotationX += 0.001; // Slower rotation
+      rotationX += 0.001;
       rotationY += 0.001;
       textMesh.rotation.x = Math.sin(rotationX) * 0.1;
       textMesh.rotation.y = Math.sin(rotationY) * 0.1;
@@ -107,14 +112,14 @@ export default function ThreeDName() {
     };
     window.addEventListener("resize", handleResize);
 
-    // Cleanup on unmount
     return () => {
       mount.removeChild(renderer.domElement);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isClient]);
 
   return (
     <div className="w-48 h-16 flex items-center justify-center" ref={mountRef} />
   );
 }
+

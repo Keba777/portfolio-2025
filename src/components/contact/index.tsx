@@ -12,7 +12,7 @@ const Contact = () => {
         <h3 className="text-primary text-5xl font-bold mb-6">
           Have a project?
         </h3>
-        <h3 className="text-primary text-5xl font-bold mb-14">Let's talk.</h3>
+        <h3 className="text-primary text-5xl font-bold mb-14">Let&apos;s talk.</h3>
         <button className="bg-accent hover:bg-accentDark font-medium text-primary px-4 py-2">
           Submit
         </button>

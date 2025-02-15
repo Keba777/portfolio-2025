@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AboutCard from "./AboutCard";
 import webDev from "../../../public/images/about/web-development.png";
 import mobileDev from "../../../public/images/about/app-development.png";

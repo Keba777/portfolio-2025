@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="relative flex items-center my-7">
           <div className="relative flex items-end">
             <h2 className="text-4xl font-medium text-primary pl-10">
-              I'm <span className="text-accent">Kibreab</span>
+              I&apos;m <span className="text-accent">Kibreab</span>
             </h2>
             {/* Dashed Line*/}
             <div className="absolute bottom-2 left-[-6rem] w-[120px] h-[2px] bg-accent" />
