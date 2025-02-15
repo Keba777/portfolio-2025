@@ -6,10 +6,10 @@ import gamehub from "../../../public/images/projects/gamehub.png";
 const Projects = () => {
   return (
     <section className="p-20">
-      <h2 className="text-primary text-center text-5xl font-bold mb-14">
+      <h2 className="text-primary text-center text-5xl font-bold mb-10">
         Projects
       </h2>
-      <div className="flex flex-col items-center mb-8">
+      <div className="flex flex-col items-center mb-14">
         <div className="w-[3px] h-10 bg-accent mb-2"></div>
         <div className="w-[6px] h-[6px] rounded bg-accent"></div>
       </div>
