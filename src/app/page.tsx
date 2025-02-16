@@ -8,12 +8,20 @@ import Skills from "@/components/skills";
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <About/>
-      <Projects/>
-      <Skills/>
-      <Contact/>
-      <Footer/>
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <Skills />
+      <section id="contact">
+        <Contact />
+      </section>
+      <Footer />
     </div>
   );
 }
