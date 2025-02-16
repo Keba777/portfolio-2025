@@ -16,7 +16,7 @@ const About = () => {
       <div className="lg:col-span-4">
         <h2 className="text-primary text-5xl font-bold mb-6">About me</h2>
         <p className="text-lightGray mb-8">
-          I'm a Software Engineer specializing in full-stack development, mobile
+          I&apos;m a Software Engineer specializing in full-stack development, mobile
           development, and AI/ML engineering. I build scalable web and mobile
           applications, optimize backend performance, and leverage AI to solve
           real-world problems.
