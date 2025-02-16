@@ -16,15 +16,17 @@ export default {
         accentLight: "#FF846A",
         accentDark: "#E0553C",
 
+        secondaryBlack: "#161B22",
+
         lightGray: "#C0C0C0",
         mutedBlue: "#24292E",
 
         softRed: "#FF4A4A",
 
-        darkGray: "#6E6E6E", 
+        darkGray: "#6E6E6E",
         mediumGray: "#8A8A8A",
         softGray: "#D9D9D9",
-        deepGray: "#4F4F4F", 
+        deepGray: "#4F4F4F",
       },
     },
   },

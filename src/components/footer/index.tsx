@@ -6,7 +6,7 @@ import ThreeDName from "../common/ThreeDName";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-center bg-gray-950 text-center py-12">
+    <footer className="flex flex-col items-center justify-center bg-secondaryBlack text-center py-12">
       <ThreeDName />
       <div className="flex justify-center space-x-4">
         <a
