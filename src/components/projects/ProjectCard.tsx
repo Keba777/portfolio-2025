@@ -17,80 +17,42 @@ interface Props {
 
 const ProjectCard = ({ title, description, stacks, src, links, reverse = false }: Props) => {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-14`}>
-      {reverse ? (
-        <>
-          {/* Image First */}
-          <div className="flex justify-center items-center">
-            <Image src={src} alt={`${title} project image`} />
-          </div>
-          {/* Description Second */}
-          <div className="p-6 flex flex-col justify-center items-start">
-            <h3 className="text-2xl font-bold text-softGray mb-4">{title}</h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {stacks.map((stack) => (
-                <Badge key={stack} name={stack} />
-              ))}
-            </div>
-            <p className="text-lightGray mb-10">{description}</p>
-            <div className="flex space-x-8 mb-20">
-              <Link
-                href={links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[14px] bg-accent hover:bg-accentDark font-medium text-primary px-4 py-2"
-              >
-                View Github
-              </Link>
-              <Link
-                href={links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[14px] text-primary border-b-2 border-accent hover:border-accentDark hover:text-lightGray flex items-center"
-              >
-                View Project <GoArrowUpRight className="w-5 h-5 pl-1" />
-              </Link>
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          {/* Description First */}
-          <div className="p-6 flex flex-col justify-center items-start">
-            <h3 className="text-2xl font-bold text-softGray mb-4">{title}</h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {stacks.map((stack) => (
-                <Badge key={stack} name={stack} />
-              ))}
-            </div>
-            <p className="text-lightGray mb-10">{description}</p>
-            <div className="flex space-x-8 mb-20">
-              <Link
-                href={links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[14px] bg-accent hover:bg-accentDark font-medium text-primary px-4 py-2"
-              >
-                View Github
-              </Link>
-              <Link
-                href={links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[14px] text-primary border-b-2 border-accent hover:border-accentDark hover:text-lightGray flex items-center"
-              >
-                View Project <GoArrowUpRight className="w-5 h-5 pl-1" />
-              </Link>
-            </div>
-          </div>
-          {/* Image Second */}
-          <div className="flex justify-center items-center">
-            <Image src={src} alt={`${title} project image`} />
-          </div>
-        </>
-      )}
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 lg:gap-14 border-accentDark mb-24 md:mb-0 rounded-xl md:rounded-none overflow-hidden`}>
+      {/* Conditionally Reverse Order for Desktop */}
+      <div className={`${reverse ? "md:order-2" : "md:order-1"} flex justify-center items-center`}>
+        <Image src={src} alt={`${title} project image`} />
+      </div>
+
+      <div className={`${reverse ? "md:order-1" : "md:order-2"} md:p-6 flex flex-col justify-center items-start`}>
+        <h3 className="text-2xl font-bold text-softGray mb-3 md:mb-4">{title}</h3>
+        <div className="flex flex-wrap gap-2 mb-2 md:mb-4">
+          {stacks.map((stack) => (
+            <Badge key={stack} name={stack} />
+          ))}
+        </div>
+        <p className="text-lightGray mb-3 md:mb-10 ">{description}</p>
+        <div className="flex w-full justify-between md:w-auto md:justify-normal space-x-0 md:space-x-8  md:mb-20">
+          <Link
+            href={links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[14px] bg-accent hover:bg-accentDark font-medium text-primary px-4 py-2"
+          >
+            View Github
+          </Link>
+          <Link
+            href={links.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-[14px] text-primary border-b-2 border-accent hover:border-accentDark hover:text-lightGray flex items-center"
+          >
+            View Project <GoArrowUpRight className="w-5 h-5 pl-1" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
+
 
 export default ProjectCard;

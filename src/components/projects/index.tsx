@@ -5,12 +5,12 @@ import gamehub from "../../../public/images/projects/gamehub.png";
 
 const Projects = () => {
   return (
-    <section className="p-20">
-      <h2 className="text-primary text-center text-5xl font-bold mb-10">
+    <section className="px-6 md:px-10 lg:px-20 py-14 md:py-0">
+      <h2 className="text-primary text-center text-4xl lg:text-5xl font-bold mb-4 md:mb-10">
         Projects
       </h2>
-      <div className="flex flex-col items-center mb-14">
-        <div className="w-[3px] h-10 bg-accent mb-2"></div>
+      <div className="flex flex-col items-center mb-10  md:mb-14">
+        <div className="w-[3px] h-6 md:h-10 bg-accent mb-2"></div>
         <div className="w-[6px] h-[6px] rounded bg-accent"></div>
       </div>
 

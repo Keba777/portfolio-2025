@@ -6,7 +6,7 @@ import ServiceCard from "./ServiceCard";
 
 const About = () => {
   return (
-    <section className="px-6 pt-20 md:pt-0 md:px-10 lg:p-20 md:grid md:grid-cols-2 lg:grid-cols-7 gap-8 flex flex-col-reverse">
+    <section className="px-6 pt-20 md:pt-0 md:px-10 lg:px-20 md:grid md:grid-cols-2 lg:grid-cols-7 gap-8 flex flex-col-reverse">
       {/* Services Section (First on mobile, second on larger screens) */}
       <div className="md:pl-6 w-full flex flex-col justify-center items-center md:items-start lg:col-span-3 bg-secondaryBlack md:bg-transparent p-6 rounded-xl shadow-lg">
         <h2 className="md:invisible text-white text-3xl font-bold mb-6 mt-3 md:mt-0 md:mb-0 text-center relative">

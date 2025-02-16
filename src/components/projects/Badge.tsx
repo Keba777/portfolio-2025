@@ -6,7 +6,7 @@ interface Props {
 
 const Badge = ({ name }: Props) => {
   return (
-    <span className="bg-mutedBlue text-softGray text-sm font-medium me-2 px-3 py-1 rounded-xl">
+    <span className="bg-mutedBlue text-softGray text-[13px] md:text-sm font-medium me-2 px-3 py-1 rounded-xl">
       {name}
     </span>
   );
