@@ -17,7 +17,7 @@ interface Props {
 
 const ProjectCard = ({ title, description, stacks, src, links, reverse = false }: Props) => {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 lg:gap-14 border-accentDark mb-24 md:mb-0 rounded-xl md:rounded-none overflow-hidden`}>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 lg:gap-14 border-accentDark rounded-xl md:rounded-none overflow-hidden`}>
       {/* Conditionally Reverse Order for Desktop */}
       <div className={`${reverse ? "md:order-2" : "md:order-1"} flex justify-center items-center`}>
         <Image src={src} alt={`${title} project image`} />

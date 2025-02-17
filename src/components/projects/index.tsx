@@ -14,39 +14,41 @@ const Projects = () => {
         <div className="w-[6px] h-[6px] rounded bg-accent"></div>
       </div>
 
-      <ProjectCard
-        title="Cartify"
-        description="A modern and user-friendly e-commerce platform designed to provide seamless online shopping experiences. Features include product browsing, cart management, secure checkout, and real-time order tracking."
-        src={cartify}
-        stacks={["Next.js", "Tailwind CSS", "Golang", "PostgreSQL"]}
-        links={{
-          github: "https://github.com/Keba777/Cartify",
-          live: "https://cartify-livid.vercel.app/",
-        }}
-      />
+      <div className="flex flex-col space-y-20 md:space-y-0">
+        <ProjectCard
+          title="Cartify"
+          description="A modern and user-friendly e-commerce platform designed to provide seamless online shopping experiences. Features include product browsing, cart management, secure checkout, and real-time order tracking."
+          src={cartify}
+          stacks={["Next.js", "Tailwind CSS", "Golang", "PostgreSQL"]}
+          links={{
+            github: "https://github.com/Keba777/Cartify",
+            live: "https://cartify-livid.vercel.app/",
+          }}
+        />
 
-      <ProjectCard
-        title="ByteBlog"
-        description="A lightweight and intuitive blogging platform built for developers and writers. Features include markdown support, user authentication, and SEO-friendly content management."
-        src={byteblog}
-        stacks={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
-        links={{
-          github: "https://github.com/Keba777/byte-blog",
-          live: "https://byte-blog-delta.vercel.app/",
-        }}
-        reverse={true}
-      />
+        <ProjectCard
+          title="ByteBlog"
+          description="A lightweight and intuitive blogging platform built for developers and writers. Features include markdown support, user authentication, and SEO-friendly content management."
+          src={byteblog}
+          stacks={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
+          links={{
+            github: "https://github.com/Keba777/byte-blog",
+            live: "https://byte-blog-delta.vercel.app/",
+          }}
+          reverse={true}
+        />
 
-      <ProjectCard
-        title="GameHub"
-        description="A gaming discovery platform that helps users explore, review, and track their favorite games. Features include curated game lists, real-time updates, and personalized recommendations."
-        src={gamehub}
-        stacks={["React", "TypeScript", "Chakira Ui", "RAWG API"]}
-        links={{
-          github: "https://github.com/Keba777/game-hub",
-          live: "https://game-hub-self-phi.vercel.app/",
-        }}
-      />
+        <ProjectCard
+          title="GameHub"
+          description="A gaming discovery platform that helps users explore, review, and track their favorite games. Features include curated game lists, real-time updates, and personalized recommendations."
+          src={gamehub}
+          stacks={["React", "TypeScript", "Chakira Ui", "RAWG API"]}
+          links={{
+            github: "https://github.com/Keba777/game-hub",
+            live: "https://game-hub-self-phi.vercel.app/",
+          }}
+        />
+      </div>
     </section>
   );
 };

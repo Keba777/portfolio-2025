@@ -34,7 +34,7 @@ const Hero = () => {
         <Image
           src={Profile}
           alt="profile"
-          className="w-[85%] sm:w-[80%] md:w-[70%] lg:w-[430px] h-auto max-h-[70vh] object-contain 
+          className="w-[100%] sm:w-[80%] md:w-[70%] lg:w-[430px] h-auto max-h-[70vh] object-contain 
           rounded-[200px] sm:rounded-[200px] md:rounded-[250px] lg:rounded-[300px] 
           shadow-accent shadow-2xl"
         />
